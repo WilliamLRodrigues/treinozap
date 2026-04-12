@@ -521,7 +521,8 @@ details p {
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 420px;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-gallery {
@@ -651,14 +652,6 @@ details p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   align-items: stretch;
-}
-
-@media (max-width: 900px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    margin-inline: auto;
-  }
 }
 
 .price-card {
