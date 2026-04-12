@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #f7f8fc;
   --ink: #141821;
   --muted: #4f566b;
@@ -510,6 +510,14 @@ details p {
   box-shadow: 0 16px 36px rgba(20, 24, 33, 0.13);
 }
 
+/* ── Pricing ── */
+.pricing-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
 @media (max-width: 980px) {
   .three,
   .feature-grid,
@@ -519,7 +527,8 @@ details p {
   }
 
   .pricing-grid {
-    max-width: 420px;
+    grid-template-columns: 1fr;
+    max-width: 440px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -639,24 +648,7 @@ details p {
   color: #fff;
 }
 
-/* ── Pricing ── */
-.section-lead {
-  color: var(--muted);
-}
 
-.pricing-grid {
-  margin-top: 1.8rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: stretch;
-}
-
-@media (min-width: 901px) {
-  .pricing-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
 .price-card {
   background: var(--surface);
