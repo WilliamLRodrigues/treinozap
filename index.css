@@ -519,7 +519,6 @@ details p {
   }
 
   .pricing-grid {
-    grid-template-columns: 1fr;
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
@@ -568,8 +567,7 @@ details p {
   .three,
   .feature-grid,
   .proof-grid,
-  .timeline,
-  .pricing-grid {
+  .timeline {
     grid-template-columns: 1fr;
   }
 
@@ -649,9 +647,15 @@ details p {
 .pricing-grid {
   margin-top: 1.8rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: stretch;
+}
+
+@media (min-width: 901px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .price-card {
