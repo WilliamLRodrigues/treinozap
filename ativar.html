@@ -69,6 +69,27 @@
           <a class="btn btn-main" href="index.html">← Voltar para a página principal</a>
         </div>
 
+        <div class="setup-video-section">
+          <p class="setup-video-label">Prefere ver ao invés de ler?</p>
+          <h3>Assista como é fácil ativar</h3>
+          <div class="demo-thumb" id="setupThumb">
+            <img src="img/willinhai.jpeg" alt="Clique para ver o vídeo de ativação" />
+            <button class="demo-play-btn" aria-label="Assistir tutorial de ativação">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="40" fill="rgba(255,107,53,0.92)"/>
+                <polygon points="32,24 60,40 32,56" fill="#fff"/>
+              </svg>
+            </button>
+            <span class="demo-label">Ver tutorial de ativação</span>
+          </div>
+          <dialog class="demo-dialog" id="setupDialog">
+            <button class="demo-close" id="setupClose" aria-label="Fechar">&times;</button>
+            <video controls autoplay playsinline preload="none">
+              <source src="img/setup.mp4" type="video/mp4" />
+            </video>
+          </dialog>
+        </div>
+
       </div>
     </section>
 
@@ -100,5 +121,15 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const setupThumb = document.getElementById('setupThumb');
+    const setupDialog = document.getElementById('setupDialog');
+    const setupClose = document.getElementById('setupClose');
+    if (setupThumb && setupDialog) {
+      setupThumb.addEventListener('click', () => setupDialog.showModal());
+      setupClose.addEventListener('click', () => { setupDialog.close(); setupDialog.querySelector('video').pause(); });
+      setupDialog.addEventListener('click', (e) => { if (e.target === setupDialog) { setupDialog.close(); setupDialog.querySelector('video').pause(); } });
+    }
+  </script>
 </body>
 </html>
