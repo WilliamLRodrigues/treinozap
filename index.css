@@ -554,7 +554,8 @@ details p {
   .three,
   .feature-grid,
   .proof-grid,
-  .timeline {
+  .timeline,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
@@ -570,4 +571,267 @@ details p {
     right: 1rem;
     text-align: center;
   }
+}
+
+/* ── Differentiator section ── */
+.section-lead {
+  margin-top: 0.8rem;
+  color: #b7c2da;
+  font-size: 1.02rem;
+  max-width: 62ch;
+}
+
+.section.contrast .section-lead {
+  color: #b7c2da;
+}
+
+.diff-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.diff-cards article h3 {
+  color: #fff;
+}
+
+/* ── Pricing ── */
+.section-lead {
+  color: var(--muted);
+}
+
+.pricing-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.price-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  box-shadow: 0 5px 14px rgba(20, 24, 33, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(20, 24, 33, 0.13);
+}
+
+.price-featured {
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 28px rgba(255, 107, 53, 0.2);
+}
+
+.price-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-2);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan-name {
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.price-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  margin: 0.3rem 0;
+}
+
+.price-currency {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.price-value {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.price-period {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.price-total {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.price-save {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0;
+}
+
+.price-features {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  flex: 1;
+}
+
+.price-features li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.price-card .btn {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+.price-note {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+/* ── Plan limits ── */
+.plan-limits {
+  margin-top: 1.4rem;
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.plan-limits p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.plan-limits strong {
+  color: var(--ink);
+}
+
+.plan-limits a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.plan-limits a:hover {
+  border-color: var(--accent);
+}
+
+/* ── ROI banner ── */
+.roi-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  margin: 1.6rem 0 1.8rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 5px 14px rgba(20, 24, 33, 0.07);
+}
+
+.roi-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  gap: 0.25rem;
+}
+
+.roi-item strong {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.roi-item span {
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+.roi-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .roi-banner {
+    flex-direction: column;
+  }
+  .roi-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* ── No-card banner ── */
+.no-card-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #0f1826, #152237);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  color: #f0f4ff;
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  box-shadow: 0 8px 28px rgba(255, 107, 53, 0.12);
+}
+
+.no-card-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.no-card-banner strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent-2);
+}
+
+.no-card-banner p {
+  font-size: 0.92rem;
+  color: #b7c2da;
+  margin: 0;
+  line-height: 1.6;
 }
