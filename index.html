@@ -146,12 +146,22 @@
       <div class="container narrow">
         <p class="eyebrow">Demonstrações reais</p>
         <h2>Veja o produto funcionando na prática</h2>
-        <div class="demo-video-wrap">
-          <video controls playsinline preload="metadata" poster="img/demonstracaorank.jpeg">
-            <source src="img/demo.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo HTML5.
-          </video>
+        <div class="demo-thumb" id="demoThumb">
+          <img src="img/demonstracaorank.jpeg" alt="Clique para ver o vídeo de demonstração" />
+          <button class="demo-play-btn" aria-label="Assistir demonstração">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="rgba(255,107,53,0.92)"/>
+              <polygon points="32,24 60,40 32,56" fill="#fff"/>
+            </svg>
+          </button>
+          <span class="demo-label">Ver demonstração do produto</span>
         </div>
+        <dialog class="demo-dialog" id="demoDialog">
+          <button class="demo-close" id="demoClose" aria-label="Fechar">&times;</button>
+          <video controls autoplay playsinline preload="none">
+            <source src="img/demo.mp4" type="video/mp4" />
+          </video>
+        </dialog>
       </div>
     </section>
 
