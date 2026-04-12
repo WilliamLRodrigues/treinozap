@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #f7f8fc;
   --ink: #141821;
   --muted: #4f566b;
@@ -646,6 +646,23 @@ details p {
 
 .diff-cards article h3 {
   color: #fff;
+}
+
+/* ── Demo video ── */
+.demo-video-wrap {
+  margin-top: 1.4rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  background: #000;
+}
+
+.demo-video-wrap video {
+  width: 100%;
+  display: block;
+  max-height: 600px;
+  object-fit: contain;
 }
 
 
