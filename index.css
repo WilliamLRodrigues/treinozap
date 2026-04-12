@@ -518,6 +518,10 @@ details p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-gallery {
     grid-template-columns: 1fr;
   }
@@ -537,6 +541,13 @@ details p {
 
   .stat-item {
     border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:last-child {
+    border-bottom: none;
   }
 
   .photo-strip {
@@ -557,6 +568,39 @@ details p {
   .timeline,
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .no-card-banner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-cta .btn,
+  .price-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .two-col {
+    gap: 1.5rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
   }
 
   .footer-inner {
