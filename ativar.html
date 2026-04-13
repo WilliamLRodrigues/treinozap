@@ -92,7 +92,7 @@
           </div>
           <dialog class="demo-dialog" id="setupDialog">
             <button class="demo-close" id="setupClose" aria-label="Fechar">&times;</button>
-            <video controls autoplay playsinline preload="none">
+            <video controls playsinline preload="none">
               <source src="img/setup.mp4" type="video/mp4" />
             </video>
           </dialog>
@@ -134,7 +134,7 @@
     const setupDialog = document.getElementById('setupDialog');
     const setupClose = document.getElementById('setupClose');
     if (setupThumb && setupDialog) {
-      setupThumb.addEventListener('click', () => setupDialog.showModal());
+      setupThumb.addEventListener('click', () => { setupDialog.showModal(); setupDialog.querySelector('video').play(); });
       setupClose.addEventListener('click', () => { setupDialog.close(); setupDialog.querySelector('video').pause(); });
       setupDialog.addEventListener('click', (e) => { if (e.target === setupDialog) { setupDialog.close(); setupDialog.querySelector('video').pause(); } });
     }
